@@ -37,46 +37,46 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP = "https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento.";
+const WHATSAPP = "https://wa.me/5553984431591?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento.";
 
 const services = [
   {
     icon: Rocket,
-    title: "Landing Pages Focadas em Vendas",
-    desc: "Design moderno e otimizado para transformar cliques em leads no seu WhatsApp.",
+    title: "Páginas de Alta Conversão",
+    desc: "Estruturas modernas e atraentes feitas para transformar visitantes em clientes diretos no seu WhatsApp.",
   },
   {
     icon: MonitorSmartphone,
-    title: "Sistemas Web e SaaS",
-    desc: "Soluções exclusivas em Node e React para automatizar a gestão do seu negócio.",
+    title: "Sistemas e Portais Sob Medida",
+    desc: "Plataformas web exclusivas para organizar seu atendimento, gestão de clientes e vendas em um só lugar.",
   },
   {
     icon: Cpu,
-    title: "Automações Inteligentes",
-    desc: "Integração de processos e extração de dados para você economizar tempo.",
+    title: "Automações e Integrações",
+    desc: "Elimine tarefas manuais repetitivas e conecte suas ferramentas para sua equipe economizar tempo todos os dias.",
   },
 ];
 
 const benefits = [
   {
     icon: Zap,
-    title: "Entrega rápida",
-    desc: "Projetos no ar em dias, não em meses. Sprints curtas e comunicação direta com quem desenvolve.",
+    title: "Agilidade de verdade",
+    desc: "Seu projeto pronto para vender em poucos dias. Sem burocracia, sem prazos infinitos e com atendimento direto.",
   },
   {
     icon: Gauge,
-    title: "Alta performance",
-    desc: "Carregamento em milissegundos, notas altas no PageSpeed e SEO técnico desde o primeiro commit.",
+    title: "Sites ultra-rápidos",
+    desc: "Páginas leves que carregam instantaneamente. O seu cliente não perde tempo e o Google posiciona sua empresa no topo.",
   },
   {
     icon: Smartphone,
-    title: "Mobile-first",
-    desc: "Mais de 80% dos seus visitantes vêm do celular. Construímos pensando neles primeiro.",
+    title: "Perfeito no Celular",
+    desc: "A maioria dos seus clientes vai te achar pelo smartphone. Garantimos uma experiência perfeita para fechar vendas pelo WhatsApp.",
   },
   {
     icon: Code2,
-    title: "Stack moderna",
-    desc: "React, Node e infraestrutura em nuvem: código limpo, seguro e pronto para escalar.",
+    title: "Segurança e Escala",
+    desc: "Sua estrutura feita com tecnologia de ponta: site seguro, sem travamentos e pronto para acompanhar o crescimento da sua empresa.",
   },
 ];
 
@@ -129,7 +129,7 @@ function Index() {
             className="btn-glow inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold"
           >
             <MessageCircle className="h-4 w-4" aria-hidden="true" />
-            <span className="hidden sm:inline">Falar no WhatsApp</span>
+            <span className="hidden sm:inline">Chamar no WhatsApp</span>
             <span className="sm:hidden">WhatsApp</span>
           </a>
         </div>
@@ -207,8 +207,8 @@ function Index() {
                 Velocidade, performance e código que dura.
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-                Cada projeto nasce enxuto, rápido e preparado para crescer junto com a sua operação —
-                sem templates genéricos e sem retrabalho.
+                Cada projeto nasce enxuto, rápido e preparado para crescer junto com a sua operação
+                -- sem templates genéricos e sem retrabalho.
               </p>
             </div>
 
@@ -251,25 +251,23 @@ function Index() {
             © {new Date().getFullYear()} WP Solutions — Desenvolvimento Inteligente
           </p>
           <div className="flex items-center gap-4">
-            {[
-              [Instagram, "Instagram", "https://instagram.com"],
-              [Linkedin, "LinkedIn", "https://linkedin.com"],
-              [Github, "GitHub", "https://github.com"],
-            ].map(([Icon, label, href]) => {
-              const I = Icon as typeof Instagram;
-              return (
-                <a
-                  key={label as string}
-                  href={href as string}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label as string}
-                  className="text-muted-foreground transition-colors hover:text-cyan"
-                >
-                  <I className="h-5 w-5" aria-hidden="true" />
-                </a>
-              );
-            })}
+            {[[Github, "GitHub", "https://github.com/weltonnpereira"]].map(
+              ([Icon, label, href]) => {
+                const I = Icon as typeof Instagram;
+                return (
+                  <a
+                    key={label as string}
+                    href={href as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label as string}
+                    className="text-muted-foreground transition-colors hover:text-cyan"
+                  >
+                    <I className="h-5 w-5" aria-hidden="true" />
+                  </a>
+                );
+              },
+            )}
           </div>
         </div>
       </footer>

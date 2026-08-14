@@ -77,14 +77,46 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+
+      // SEO Básico & Título da Aba
+      { title: "WP Solutions | Criação de Landing Pages e Soluções Digitais" },
+      {
+        name: "description",
+        content:
+          "Transforme visitantes em clientes com Landing Pages de alta conversão, sistemas sob medida e automações para pequenas e médias empresas.",
+      },
+      {
+        name: "keywords",
+        content:
+          "criação de sites, landing page, sistemas web, automação comercial, desenvolvimento web, WP Solutions",
+      },
+      { name: "author", content: "WP Solutions" },
+      { name: "robots", content: "index, follow" }, // Diz ao Google para indexar e seguir os links
+
+      // Open Graph / WhatsApp / Facebook Preview
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://wptechsolutions.online" },
+      { property: "og:title", content: "WP Solutions | Soluções Digitais de Alta Conversão" },
+      {
+        property: "og:description",
+        content:
+          "Criamos Landing Pages e Automações sob medida para sua empresa escalar as vendas no WhatsApp e no Google.",
+      },
+      { property: "og:image", content: "https://wptechsolutions.online/og-image.png" },
+      { property: "og:site_name", content: "WP Solutions" },
+      { property: "og:locale", content: "pt_BR" },
+
+      // Twitter Cards
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "WP Solutions | Soluções Digitais de Alta Conversão" },
+      {
+        name: "twitter:description",
+        content: "Desenvolvimento de Landing Pages e Sistemas para PMEs escalarem suas vendas.",
+      },
+      { name: "twitter:image", content: "https://wptechsolutions.online/og-image.png" },
+
+      // Meta Tag de Verificação do Google Search Console (Adicione o código que o Google te der)
+      // { name: "google-site-verification", content: "SEU_CODIGO_DO_GOOGLE_AQUI" },
     ],
     links: [
       {
@@ -98,6 +130,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "canonical", href: "https://wptechsolutions.online" },
+    ],
+    scripts: [
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-1GYKSHWLER",
+        async: true,
+      },
+      {
+        children: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1GYKSHWLER');
+        `,
+      },
     ],
   }),
   shellComponent: RootShell,
